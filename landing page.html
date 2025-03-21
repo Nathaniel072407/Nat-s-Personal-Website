@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nat's Animated Landing Page</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .landing-section {
+            position: relative;
+            text-align: center;
+            padding: 50px;
+            background: #ecf0f1;
+            overflow: hidden;
+        }
+
+        .image-container {
+            display: flex;
+            width: max-content;
+            animation: scrollImages 100s linear infinite;
+        }
+
+        .scroll-wrapper {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-container img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-right: 20px;
+        }
+
+        .button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50; 
+    text-decoration: none;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: white; 
+    color: #2c3e50; 
+}
+
+        @keyframes scrollImages {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(10%);
+            }
+        }
+        @keyframes scrollImages {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+    
+        .scroll-wrapper:hover .image-container {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Nat's Animated World</h1>
+    </header>
+    <main>
+        <section class="landing-section">
+            <h2>I'm Pacamalan Nathaniel | TVL-ICT-Programming Student | Welcome To My World!</h2>
+            <p>Web development has been my passion, and I'm here to share my journey with you.</p>
+
+            <div class="scroll-wrapper">
+                <div class="image-container">
+                    <img src="hatdog1.jpeg" alt="Image 1">
+                    <img src="hatdog2.jpeg" alt="Image 2">
+                    <img src="hatdog3.jpeg" alt="Image 3">
+                    <img src="hatdog4.jpeg" alt="Image 4">
+                    <img src="hatdog5.jpeg" alt="Image 5">
+                    <img src="hatdog6.jpeg" alt="Image 6">
+                    <img src="hatdog7.jpeg" alt="Image 7">
+                    <img src="hatdog8.jpeg" alt="Image 8">
+                    <img src="hatdog9.jpeg" alt="Image 9">
+                    <img src="hatdog10.jpeg" alt="Image 10">
+                    <img src="hatdog11.jpeg" alt="Image 11">
+                    <img src="hatdog12.jpeg" alt="Image 12">
+                    <img src="hatdog13.jpeg" alt="Image 13">
+                    <img src="hatdog14.jpeg" alt="Image 14">
+                    <img src="hatdog15.jpeg" alt="Image 15">
+                    <img src="hatdog16.jpeg" alt="Image 16">
+                    <img src="hatdog17.jpeg" alt="Image 17">
+                    <img src="hatdog18.jpeg" alt="Image 18">
+                    <img src="hatdog19.jpeg" alt="Image 19">
+                    <img src="hatdog20.jpeg" alt="Image 20">
+                    <img src="hatdog21.jpeg" alt="Image 21">
+                    <img src="hatdog22.jpeg" alt="Image 22">
+                    <img src="hatdog23.jpeg" alt="Image 23">
+                    <img src="hatdog24.jpeg" alt="Image 24">
+                    <img src="hatdog25.jpeg" alt="Image 25">
+                    <img src="hatdog26.jpeg" alt="Image 26">
+                    <img src="hatdog27.jpeg" alt="Image 27">
+                    <img src="hatdog28.jpeg" alt="Image 28">
+                    <img src="hatdog29.jpeg" alt="Image 29">
+                    <img src="hatdog30.jpeg" alt="Image 30">
+                    <img src="hatdog31.jpeg" alt="Image 31">
+                    <img src="hatdog32.jpeg" alt="Image 32">
+                    <img src="hatdog33.jpg" alt="Image 33">
+                    <img src="hatdog34.jpg" alt="Image 34">
+                    <img src="hatdog35.jpg" alt="Image 35">
+                    <img src="hatdog36.jpg" alt="Image 36">
+                    <img src="hatdog37.jpg" alt="Image 37">
+                    <img src="hatdog38.jpg" alt="Image 38">
+                </div>
+            </div>
+
+            <p>This is where I share my thoughts, ideas, and experiences.</p>
+            <a href="about.html" class="button">Learn More</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pacamalan Nathaniel | All Rights Reserved</p>
+    </footer>
+
+    <script>
+
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.querySelector(".image-container");
+            container.innerHTML += container.innerHTML; 
+        });
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        
+        window.onload = function() {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+            }
+        }
+
+
+    </script>
+</body>
+</html>

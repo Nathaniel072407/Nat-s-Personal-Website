@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Home</title>
+    <script>
+        
+        function showAlert() {
+            alert("You clicked the 'Learn More' button!");
+        }
+      
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        
+        window.onload = function() {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Nat's Personal Website</h1>
+        
+        <button onclick="toggleDarkMode()">Dark Mode</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="homepage">
+            <div class="homepage-text">
+                <h2>Welcome to My Personal Website!</h2>
+                <img src="hatdog.jpg" alt="lago" class="lago">
+                <h3>What I Love to Do</h3>
+                <p>I love designing websites that not only look amazing but also provide seamless user experiences. It's the intersection of design and development that excites me the most!</p>
+                <a href="landing page.html" class="button" onclick="showAlert()">Learn More</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pacamalan Nathaniel | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

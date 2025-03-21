@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Resources</title>
+    <script>
+    
+              
+    function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        
+        window.onload = function() {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+            }
+        }
+        </script>
+
+</head>
+<body>
+    <header>
+        <h1>Resources</h1>
+ 
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Useful Resources</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=QbzXxQZmtN8&pp=ygUUb25lIHBpZWNlIGZ1bGwgbW92aWU%3D">One Piece</a></li>
+                <li><a href="https://www.j-psp.com/download/awareness-of-cyber-security-aspects-in-distance-education-14348.pdf">Cybersecurity Awareness</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>My Code experience</h2>
+            <ul>
+                <li><a href="https://nathaniel072407.github.io/Mondrian-Painting/">Mondrian Painting</a></li>
+                <li><a href="https://nathaniel072407.github.io/Landing-Page/">Landing Page</a></li>
+                <li><a href="https://nathaniel072407.github.io/Birthday-Invitation/">Birthday Invitation</a></li>
+                <li><a href="https://nathaniel072407.github.io/LAOS-FLAG/">Laos Flag</a></li>
+                <li><a href="https://nathaniel072407.github.io/MOTIVATIONPOSTER/">Motivational Poster</a></li>
+                <li><a href="https://nathaniel072407.github.io/Resume/">Online Resume</a></li> 
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pacamalan Nathaniel | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
